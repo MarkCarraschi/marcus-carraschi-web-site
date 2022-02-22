@@ -23,6 +23,7 @@ var bio = {
 
         var formattedMobile = HTMLmobile.replace(DATA, bio.contacts.mobile);
         var formattedEmail = HTMLemail.replace(DATA, bio.contacts.email);
+        var formattedLinkedin = HTMLlinkedin.replace(DATA, bio.contacts.linkedin);
         var formattedGihub = HTMLgithub.replace(DATA, bio.contacts.github);
         var formattedLocation = HTMLlocation.replace(DATA, bio.contacts.location);
 
@@ -30,7 +31,7 @@ var bio = {
 
         $('#header').prepend(formattedName + formattedRole);
         $('#topContacts, #footerContacts').append(formattedMobile + formattedEmail +
-            formattedGihub + formattedLocation)
+            formattedLinkedin + formattedGihub + formattedLocation)
         //$('#header').append(formattedBioPic);
 
         if (bio.skills.length > 0) {
@@ -42,6 +43,43 @@ var bio = {
         }
 
     }
+
+};
+
+var education = {
+
+    schools: [
+        {
+            'name': 'University center FEI',
+            'location': 'São Bernardo do Campo, São Paulo, Brazil',
+            'degree': 'Bachelor of Computer Science',
+            'majors': ['Computer Science'],
+            'dates': '2015-2019',
+            'url': ''
+        },
+        {
+            'name': 'Technical School ETEC',
+            'location': 'São Bernardo do Campo, São Paulo, Brazil',
+            'degree': 'Technical course of computing',
+            'majors': ['Computing'],
+            'dates': '2013-2014',
+            'url': ''
+        }
+    ],
+    onlineCourses: [
+        {
+            'title': 'Creating APIs Data Driven with ASP.NET Core 3 e EF Core 3',
+            'school': 'balta.io',
+            'dates': '2021',
+            'url': 'https://balta.io/certificados/52ddaf70-26f0-42b4-9ef2-f7c19abf1ac6'
+        },
+        {
+            'title': 'Fundamentals of microservices',
+            'school': 'balta.io',
+            'dates': '2021',
+            'url': 'https://balta.io/certificados/be7edafa-71dc-4050-9048-3be084132d8b'
+        },
+    ]
 
 };
 
